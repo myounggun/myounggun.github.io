@@ -4,12 +4,9 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
-
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
+* The most incomprehensible thing about the world is that it is at all comprehensible. 
+**Albert Einstein**
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[myounggun@gmail.com](mailto:myounggun@gmail.com)
