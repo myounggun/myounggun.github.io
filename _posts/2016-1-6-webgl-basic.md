@@ -26,6 +26,8 @@ WebGL 공부에 앞서 살펴봐야 할 기본 내용을 정리해 본다.
  - Chrome for Android 47+
 
 ## 기본 좌표계
+- 데카르트 좌표계 사용 (위쪽 Y+)  
+- 데카르트 == 카테시안 좌표계(Orgin: Descartes -> Latin: Catesius adj. Cartesian)
 - 오른손 좌표계 (모니터가 나를 향한 방향 Z+)
 
 ## 좌표 범위
