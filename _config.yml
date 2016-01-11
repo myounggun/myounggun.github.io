@@ -80,3 +80,14 @@ exclude:
 # http://jekyllrb.com/docs/pagination/#render-the-paginated-posts
 paginate: 3
 paginate_path: "/blog/page:num/"
+
+# https://github.com/jekyll/jekyll-archives/blob/master/docs/configuration.md
+jekyll-archives:
+  enabled: [year, month, tag]
+  layout: 'archive'
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'
