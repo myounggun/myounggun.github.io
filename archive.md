@@ -5,7 +5,7 @@ permalink: /archive/
 ---
 
 <!-- https://github.com/jekyll/jekyll-archives/blob/master/docs/layouts.md -->
-<h1>Archive of posts from {{ site.date | date: "%B %Y" }}</h1>
+<h1>{{ page.last_modified_at | date: "%B %Y" }}</h1>
 
 <ul class="posts">
 {% for post in site.posts %}
