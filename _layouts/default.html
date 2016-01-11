@@ -29,6 +29,9 @@
           <nav>
             <a href="{{ site.baseurl }}/blog">Blog</a>
             <a href="{{ site.baseurl }}/about">About</a>
+            {% for page in site.pages_list %}
+              <a href="{{ site.baseurl }}{{ page[1] }}">{{ page[0] }}</a>
+            {% endfor %}
           </nav>
         </header>
       </div>
