@@ -13,6 +13,7 @@ WebGL 공부에 앞서 살펴봐야 할 기본 내용을 정리해 본다.
 * WebGL 지원 여부 확인 
  - [http://get.webgl.org](http://get.webgl.org/)
  - [http://caniuse.com/#search=webgl](http://caniuse.com/#search=webgl)
+ - [http://webglreport.com](http://webglreport.com)
 
 ### PC
  - IE11+
