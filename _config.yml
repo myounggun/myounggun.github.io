@@ -100,3 +100,7 @@ jekyll-archives:
     category: '/category/:name/'
 
 # jekyll-last-modified-at
+
+
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables"]

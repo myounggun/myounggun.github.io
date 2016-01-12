@@ -5,7 +5,7 @@ thumb: https://cloud.githubusercontent.com/assets/6646861/12262877/2dcfce8e-b96e
 categories: math
 ---
 
-벡터에 대해 이해했다면 행렬에 대해 알아보자.  
+벡터에 대해 이해했다면 2D/3D 행렬, 벡터와 행렬 연산, 아핀 변환에 대해 알아보자.  
 
 ![movie-matrix1](https://cloud.githubusercontent.com/assets/6646861/12262877/2dcfce8e-b96e-11e5-9aa8-ca7a6f9508d1.jpg)
 
@@ -45,7 +45,7 @@ categories: math
 
 ### 행벡터 연산 (<font color="green">1</font> x <font color="red">3</font> * <font color="red">3</font> x <font color="green">3</font> = <font color="green">1 x 3</font>)
 
-|  행벡터(V) | * | 변환행렬(TM) | = | 변환 행벡터(V') |
+|  V | * | TM | = | V' |
 |:-:|:-:|:-:|:-:|:-:|
 | (<font color="red">x, y, 1</font>) | * | (<font color="red">m00</font>, m01, m02) | = | (x', y', 1') |
 |           |   | (<font color="red">m10</font>, m11, m12) |   |   |
@@ -57,14 +57,14 @@ y = x * m01 + y * m11 + 1 * m21;
 
 > m02 = 0, m12 = 0, m22 = 1 따라서 1 = 1
 
-#### TM * V = V'
+#### V * TM = V'
 
 <font color="red">x * m00</font>  
 행벡터 연산은 우측에 곱해집니다. 
 
 ### 열벡터 연산 (<font color="green">3</font> x <font color="red">3</font> * <font color="red">3</font> x <font color="green">1</font> = <font color="green">3 x 1</font>)
 
-| 변환행렬(TM) | * | 열벡터(V) | = | 변환 열벡터(V') |
+| TM | * | V | = | V' |
 |:-:|:-:|:-:|:-:|:-:|
 | (<font color="red">m00, m01, m02</font>) | * | (<font color="red">x</font>) | = | (x', y', 1') |
 | (m10, m11, m12) |   | (<font color="red">y</font>) |   |   |
