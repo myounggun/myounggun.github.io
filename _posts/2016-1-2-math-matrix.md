@@ -44,6 +44,7 @@ categories: math
 
 
 #### 행벡터 연산 
+---
 - <font color="green">1</font> x <font color="red">3</font> * <font color="red">3</font> x <font color="green">3</font> = <font color="green">1 x 3</font>
 
 |  V | * | TM | = | V' |
@@ -61,6 +62,7 @@ y' = x * m01 + y * m11 + 1 * m21;
 행벡터 연산은 우측에 곱해집니다. 
 
 #### 열벡터 연산
+---
 - <font color="green">3</font> x <font color="red">3</font> * <font color="red">3</font> x <font color="green">1</font> = <font color="green">3 x 1</font>
 
 | TM | * | V | = | V' |
@@ -82,6 +84,7 @@ y' = m10 * x + m11 * y + m12 * 1;
 행렬의 기본성질 중에서 '행렬의 곱은 교환법칙이 성립하지 않는다.'와 관련이 있겠네요.
 
 ### C. 행렬의 기본 성질
+---
 - AB ≠ BA
 - A(BC) = (AB)C
 - AI = IA = A
@@ -90,10 +93,12 @@ y' = m10 * x + m11 * y + m12 * 1;
     - I(idntity) = 단위행렬
 
 ### D. 아핀 변환 (Affine Transform)
+---
 아핀 변환은 '이동, 크기변환, 회전, 기울리기'를 하나의 행렬로 처리하기 위한 개념입니다.  
 고등학교 교과서, 그래픽스 서적은 대부분 열벡터 연산을 기준으로 설명합니다. 저도 열벡터 연산을 기준으로 진행해 볼께요.  
 
 #### 변환 행렬 (Transform Matrix, TM)
+---
 아핀 변환 행렬은 3x3 구조로 정의합니다.
 
 ![tm-3x3](https://cloud.githubusercontent.com/assets/6646861/12262254/20c9d328-b96a-11e5-9eed-464c208a188f.png)
@@ -118,6 +123,7 @@ y' = m10 * x + m11 * y + m12 * 1;
 예제는 HTML 캔버스를 이용하여 구현해 봅시다.
 
 #### 캔버스 변환 (Canvas Transform)
+---
 HTML5 캔버스는 아핀 변환을 넣을 수 있는 인터페이스가 있습니다. 
 
 ![tm-3x3](https://cloud.githubusercontent.com/assets/6646861/12262254/20c9d328-b96a-11e5-9eed-464c208a188f.png)  
