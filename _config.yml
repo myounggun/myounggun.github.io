@@ -26,7 +26,7 @@ footer-links:
   linkedin:
   pinterest:
   rss: # just type anything here for a working RSS icon
-  twitter: 
+  twitter:
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
@@ -78,15 +78,17 @@ exclude:
     - CNAME
 
 pages_list:
-  Blog: '/blog'       
+  Blog: '/blog'
   Archive: '/archive'
   About: '/about'
 
-# http://jekyllrb.com/docs/pagination/#render-the-paginated-posts
+# sudo gem jekyll-paginate, jekyll-archives, jekyll-last-modified-at
+
+# jekyll-paginate
 paginate: 3
 paginate_path: "/blog/page:num/"
 
-# https://github.com/jekyll/jekyll-archives/blob/master/docs/configuration.md
+# jekyll-archives
 jekyll-archives:
   enabled: [year, month, tag]
   layout: 'archive'
@@ -97,5 +99,4 @@ jekyll-archives:
     tag: '/tag/:name/'
     category: '/category/:name/'
 
-# https://github.com/gjtorikian/jekyll-last-modified-at
 # jekyll-last-modified-at
