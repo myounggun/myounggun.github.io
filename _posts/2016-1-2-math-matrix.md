@@ -9,7 +9,7 @@ categories: math
 
 ![movie-matrix1](https://cloud.githubusercontent.com/assets/6646861/12262877/2dcfce8e-b96e-11e5-9aa8-ca7a6f9508d1.jpg)
 
-# 1. Matrix2D (Affine Transform)
+# 1. Matrix2D
 3D 프로그래밍에서 벡터와 행렬에 대한 이해는 필수입니다.  
 객체의 2D 변환(이동, 크기조절, 회전, 기울리기)에 대해 살펴볼께요.  
 보통 '아핀 변환'이라고 불리우는 중요한 개념입니다.
@@ -51,11 +51,11 @@ categories: math
 |           |   | (<font color="red">m10</font>, m11, m12) |   |   |
 |           |   | (<font color="red">m20</font>, m21, m22) |   |   |
 
-x = <font color="red">x * m00 + y * m10 + 1 * m20</font>;  
-y = x * m01 + y * m11 + 1 * m21;  
-1 = x * m02 + y * m12 + 1 * m22;  
+x' = <font color="red">x * m00 + y * m10 + 1 * m20</font>;  
+y' = x * m01 + y * m11 + 1 * m21;  
+1' = x * m02 + y * m12 + 1 * m22;  
 
-> m02 = 0, m12 = 0, m22 = 1 따라서 1 = 1
+> m02 = 0, m12 = 0, m22 = 1 따라서 1' = 1
 
 #### V * TM = V'
 
@@ -73,7 +73,7 @@ y = x * m01 + y * m11 + 1 * m21;
 x' = <font color="red">m00 * x + m01 * y + m02 * 1</font>;  
 y' = m10 * x + m11 * y + m12 * 1;  
 1' = m20 * x + m21 * y + m22 * 1;  
-> m20 = 0, m21 = 0, m22 = 1 따라서 1 = 1
+> m20 = 0, m21 = 0, m22 = 1 따라서 1' = 1
 
 #### TM * V = V'
 
