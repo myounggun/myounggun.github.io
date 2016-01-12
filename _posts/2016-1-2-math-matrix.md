@@ -1,10 +1,13 @@
 ---
 layout: post
 title: 행렬(matrix)
+thumb: https://cloud.githubusercontent.com/assets/6646861/12262877/2dcfce8e-b96e-11e5-9aa8-ca7a6f9508d1.jpg
 categories: math
 ---
 
-벡터에 대해 이해했다면 행렬에 대해 알아보자.
+벡터에 대해 이해했다면 행렬에 대해 알아보자.  
+
+![movie-matrix1](https://cloud.githubusercontent.com/assets/6646861/12262877/2dcfce8e-b96e-11e5-9aa8-ca7a6f9508d1.jpg)
 
 # 1. Matrix2D (Affine Transform)
 3D 프로그래밍에서 벡터와 행렬에 대한 이해는 필수입니다.  
