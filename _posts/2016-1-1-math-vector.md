@@ -7,10 +7,11 @@ categories: math
 
 선형대수학(Linear algebra)의 기본인 벡터에 대해 알아보자.
 
+<img width="500" alt="vector-thumb" src="https://cloud.githubusercontent.com/assets/6646861/12254936/c03c230e-b931-11e5-8268-20405fd88642.png">
+
 * **선형대수학**
  - 수 대신 문자(대수)를 사용한 방정식과 기하학의 만남
  - 점, 선을 데카르트 좌표로 표시하고 방정식을 그래프로 시각화 가능해짐
-
 
 ## 1. 스칼라와 벡터의 정의
 스칼라와 벡터의 차이는 방향 유무에 있다.
@@ -19,8 +20,9 @@ categories: math
 -  벡터는 크기와 방향을 모두 가진 값이다.
 
 ## 2. 벡터(Orgin: carrier -> Latin: vector)
-실수를 순서쌍(tuple)로 구성한 수의 체계(유리수, 무리수, 허수와 같은 수의 한 체개)
-![vector-carrier](https://cloud.githubusercontent.com/assets/6646861/12255944/81ec1950-b93c-11e5-95dc-4092e9d1bf88.png)
+실수를 순서쌍(tuple)로 구성한 수의 체계(유리수, 무리수, 허수와 같은 수의 한 체개)  
+
+<img width="500" alt="vector-carrier" src="https://cloud.githubusercontent.com/assets/6646861/12255944/81ec1950-b93c-11e5-95dc-4092e9d1bf88.png">
 
 ### 벡터의 크기와 방향
 
