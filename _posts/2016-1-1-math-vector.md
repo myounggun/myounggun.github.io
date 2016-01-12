@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 벡터(vector)
+thumb: https://cloud.githubusercontent.com/assets/6646861/12254936/c03c230e-b931-11e5-8268-20405fd88642.png
 categories: math
 ---
 
