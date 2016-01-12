@@ -81,7 +81,7 @@ y' = m10 * x + m11 * y + m12 * 1;
 **AB ≠ BA**  
 행렬의 기본성질 중에서 '행렬의 곱은 교환법칙이 성립하지 않는다.'와 관련이 있겠네요.
 
-## C. 행렬의 기본 성질
+### C. 행렬의 기본 성질
 - AB ≠ BA
 - A(BC) = (AB)C
 - AI = IA = A
@@ -89,11 +89,12 @@ y' = m10 * x + m11 * y + m12 * 1;
     - A-1 = 역행렬  
     - I(idntity) = 단위행렬
 
-## D. 아핀 변환 (Affine Transform)
+### D. 아핀 변환 (Affine Transform)
 아핀 변환은 '이동, 크기변환, 회전, 기울리기'를 하나의 행렬로 처리하기 위한 개념입니다.  
 고등학교 교과서, 그래픽스 서적은 대부분 열벡터 연산을 기준으로 설명합니다. 저도 열벡터 연산을 기준으로 진행해 볼께요.  
 
-아핀 변환행렬(Transform Matrix)은 아래와 같은 3x3 행렬로 정의합니다.
+#### 변환 행렬 (Transform Matrix, TM)
+아핀 변환 행렬은 3x3 구조로 정의합니다.
 
 ![tm-3x3](https://cloud.githubusercontent.com/assets/6646861/12262254/20c9d328-b96a-11e5-9eed-464c208a188f.png)
 
@@ -116,17 +117,20 @@ y' = m10 * x + m11 * y + m12 * 1;
 각각의 변환을 개별적으로 알아보고, 마지막에 변환들을 합성해 보겠습니다.  
 예제는 HTML 캔버스를 이용하여 구현해 봅시다.
 
-### 이동 (Translate)
+#### 캔버스 변환 (Canvas Transform)
+HTML5 캔버스는 아핀 변환을 넣을 수 있는 인터페이스가 있습니다. 
+
+![tm-3x3](https://cloud.githubusercontent.com/assets/6646861/12262254/20c9d328-b96a-11e5-9eed-464c208a188f.png)  
+**context.transform(a, b, c, d, tx, ty);**   
+(a, b, c, d, tx, ty 순서로 파마메터를 넣어주는 방식)
+
+##### 1. 이동 (Translate)
 ![tm-translate](https://cloud.githubusercontent.com/assets/6646861/12262251/20aac442-b96a-11e5-81c0-b9b13de69a3a.png)
 
 **T * P = P'**  
 (T: Translate)
  
 50크기의 박스에 아핀 변환을 적용해 보죠. (그리드 한 칸: 50)  
-HTML5 캔버스는 아핀 변환을 넣을 수 있는 인터페이스가 있습니다.  
-a, b, c, d, tx, ty 순서로 파마메터를 넣어주는 방식입니다.
-
-**context.transform(a, b, c, d, tx, ty);**
 
 ```javascript
 context.transform(1, 0, 0, 1, 50, 50);
@@ -138,7 +142,7 @@ context.fillRect(0, 0, 50, 50);
 ![tm-translate-ex](https://cloud.githubusercontent.com/assets/6646861/12262461/7b21ac50-b96b-11e5-96cd-4d7888b8486b.png)
 
 
-### 크기 (Scale)
+##### 2. 크기 (Scale)
 ![tm-scale](https://cloud.githubusercontent.com/assets/6646861/12262249/20a63418-b96a-11e5-9725-e19acd0798b3.png)
 
 **S * P = P'**
@@ -152,7 +156,7 @@ context.fillRect(0, 0, 50, 50);
 
 ![tm-scale-ex](https://cloud.githubusercontent.com/assets/6646861/12262463/7b2683c4-b96b-11e5-81d7-3b946f87900e.png)
 
-### 회전 (Rotate)
+##### 3. 회전 (Rotate)
 ![tm-rotate](https://cloud.githubusercontent.com/assets/6646861/12262250/20a82b38-b96a-11e5-942e-2a3d0c8da8cd.png)
 
 **R * P = P'**
@@ -170,7 +174,7 @@ context.fillRect(0, 0, 50, 50);
 
 ![tm-rotate-ex](https://cloud.githubusercontent.com/assets/6646861/12262462/7b22c5ae-b96b-11e5-9067-4f441cd42cf8.png)
 
-### 기울이기 (Skew or Shear)
+##### 4. 기울이기 (Skew or Shear)
 ![tm-skew](https://cloud.githubusercontent.com/assets/6646861/12262248/20a5656a-b96a-11e5-89c7-56459787c865.png)
 
 **SH * P = P'**
@@ -188,7 +192,7 @@ context.fillRect(0, 0, 50, 50);
 ![tm-skew-ex](https://cloud.githubusercontent.com/assets/6646861/12262460/7b1a8646-b96b-11e5-836c-68fe87e416c5.png)
 
 
-### 결합 (Composite)
+#### 5. 결합 (Composite)
 ![tm-composite-ex](https://cloud.githubusercontent.com/assets/6646861/12262247/209ee3ca-b96a-11e5-8cea-57484f748346.png)
 
 지금까지 했던 변환을 결합해 봅시다.
@@ -209,7 +213,7 @@ context.transform(m.a, m.b, m.c, m.d, m.tx, m.ty);
 
 ![tm-composite-ex](https://cloud.githubusercontent.com/assets/6646861/12262247/209ee3ca-b96a-11e5-8cea-57484f748346.png)
 
-### 변환 행렬(Transform Matrix)를 사용하는 이유?
+### 변환 행렬을 사용하는 이유?
 사각형을 변환하는 예제를 살펴봤는데요.
 실제로는 사각형을 구성하는 4개의 꼭지점(Vertex) 좌표를 변환한 겁니다.
  
@@ -221,9 +225,9 @@ context.transform(m.a, m.b, m.c, m.d, m.tx, m.ty);
 또한, 모델의 원본 좌표(P)는 변하지 않아서 재사용이 가능하죠.  
 3D에서 P'는 3D 좌표를 스크린에 투영(project)하기 위해 변환한 2D 좌표입니다.
 
-# 2. Matrix3D
+## 2. Matrix3D
 (작성중)
 
 ---
 
-## 참고
+### 참고
