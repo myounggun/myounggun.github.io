@@ -1,13 +1,13 @@
 ---
 layout: post
 title: 행렬(matrix)
-thumb: https://cloud.githubusercontent.com/assets/6646861/12262877/2dcfce8e-b96e-11e5-9aa8-ca7a6f9508d1.jpg
+thumb: https://cloud.githubusercontent.com/assets/6646861/12264019/0aa91efc-b977-11e5-83a0-529b1f59b427.png
 categories: math
 ---
 
 벡터에 대해 이해했다면 2D/3D 행렬, 벡터와 행렬 연산, 아핀 변환에 대해 알아보자.  
 
-![movie-matrix1](https://cloud.githubusercontent.com/assets/6646861/12262877/2dcfce8e-b96e-11e5-9aa8-ca7a6f9508d1.jpg)
+![matrix](https://cloud.githubusercontent.com/assets/6646861/12264019/0aa91efc-b977-11e5-83a0-529b1f59b427.png)
 
 ## 1. Matrix2D
 3D 프로그래밍에서 벡터와 행렬에 대한 이해는 필수입니다.  
