@@ -9,16 +9,14 @@ categories: math
 
 ![movie-matrix1](https://cloud.githubusercontent.com/assets/6646861/12262877/2dcfce8e-b96e-11e5-9aa8-ca7a6f9508d1.jpg)
 
-# 1. Matrix2D
+## 1. Matrix2D
 3D 프로그래밍에서 벡터와 행렬에 대한 이해는 필수입니다.  
 객체의 2D 변환(이동, 크기조절, 회전, 기울리기)에 대해 살펴볼께요.  
 보통 '아핀 변환'이라고 불리우는 중요한 개념입니다.
 
-## A. 행행렬(row matrix)과 열행렬(column matrix)
-> - 행행렬 = 행벡터  
-> - 열행렬 = 열벡터
-
-### 행벡터
+### A. 벡터의 행렬 표현 
+---
+#### 행행렬(row matrix) = 행벡터
 아래 벡터는 한 줄로 되어 있습니다. 즉, 행벡터겠죠.
 
 ```
@@ -27,7 +25,8 @@ categories: math
 
 1행 x 3열 -> <font color="green">**1** x **3** </font>행벡터입니다.
 
-### 열벡터
+#### 열행렬(column matrix) = 열벡터
+
 ```
 (x)
 (y)
@@ -35,15 +34,17 @@ categories: math
 ```
 3행 x 1열 -> <font color="green">**3** x **1** </font> 열벡터입니다.
 
-## B. 벡터와 행렬 연산
+### B. 벡터와 행렬 연산
+---
 행렬 차수가 같아야 행렬연산이 가능합니다.  
 <font color="red">마주보는 차수</font>가 같으면 행렬 연산이 가능하고,   
 양 끝 차수가 합쳐져서 <font color="green">결과 행렬의 차수</font>가 됩니다.
 
-### <font color="green">1</font> x <font color="red">3</font> * <font color="red">3</font> x <font color="green">3</font> = <font color="green">1 x 3</font>
+<font color="green">1</font> x <font color="red">3</font> * <font color="red">3</font> x <font color="green">3</font> = <font color="green">1 x 3</font>
 
 
-### 행벡터 연산 (<font color="green">1</font> x <font color="red">3</font> * <font color="red">3</font> x <font color="green">3</font> = <font color="green">1 x 3</font>)
+#### 행벡터 연산 
+- <font color="green">1</font> x <font color="red">3</font> * <font color="red">3</font> x <font color="green">3</font> = <font color="green">1 x 3</font>
 
 |  V | * | TM | = | V' |
 |:-:|:-:|:-:|:-:|:-:|
@@ -54,15 +55,13 @@ categories: math
 x' = <font color="red">x * m00 + y * m10 + 1 * m20</font>;  
 y' = x * m01 + y * m11 + 1 * m21;  
 1' = x * m02 + y * m12 + 1 * m22;  
+(m02 = 0, m12 = 0, m22 = 1 따라서 1' = 1)
 
-> m02 = 0, m12 = 0, m22 = 1 따라서 1' = 1
-
-#### V * TM = V'
-
-<font color="red">x * m00</font>  
+**V * TM = V'** (<font color="red">x * m00</font>)  
 행벡터 연산은 우측에 곱해집니다. 
 
-### 열벡터 연산 (<font color="green">3</font> x <font color="red">3</font> * <font color="red">3</font> x <font color="green">1</font> = <font color="green">3 x 1</font>)
+#### 열벡터 연산
+- <font color="green">3</font> x <font color="red">3</font> * <font color="red">3</font> x <font color="green">1</font> = <font color="green">3 x 1</font>
 
 | TM | * | V | = | V' |
 |:-:|:-:|:-:|:-:|:-:|
@@ -73,15 +72,13 @@ y' = x * m01 + y * m11 + 1 * m21;
 x' = <font color="red">m00 * x + m01 * y + m02 * 1</font>;  
 y' = m10 * x + m11 * y + m12 * 1;  
 1' = m20 * x + m21 * y + m22 * 1;  
-> m20 = 0, m21 = 0, m22 = 1 따라서 1' = 1
+(m20 = 0, m21 = 0, m22 = 1 따라서 1' = 1)
 
-#### TM * V = V'
-
-<font color="red">m00 * x</font>  
+**TM * V = V'** (<font color="red">m00 * x</font>)  
 열벡터 연산은 좌측에 곱해집니다.  
 즉, 행벡터 연산과 열벡터 연산은 다른 결과가 나오겠죠.
 
-#### AB ≠ BA 
+**AB ≠ BA**  
 행렬의 기본성질 중에서 '행렬의 곱은 교환법칙이 성립하지 않는다.'와 관련이 있겠네요.
 
 ## C. 행렬의 기본 성질
@@ -89,15 +86,14 @@ y' = m10 * x + m11 * y + m12 * 1;
 - A(BC) = (AB)C
 - AI = IA = A
 - (A-1) * A = I  
-
-> A-1 = 역행렬  
-> I(idntity) = 단위행렬
+    - A-1 = 역행렬  
+    - I(idntity) = 단위행렬
 
 ## D. 아핀 변환 (Affine Transform)
 아핀 변환은 '이동, 크기변환, 회전, 기울리기'를 하나의 행렬로 처리하기 위한 개념입니다.  
-고등학교 교과서, 그래픽스 서적은 대부분 열벡터 연산을 기준으로 설명합니다.  
-저도 열벡터 연산을 기준으로 진행할께요.   
-아핀 변환행렬(Transform Matrix)은 아래와 같이 3x3 구조로 정의합시다.
+고등학교 교과서, 그래픽스 서적은 대부분 열벡터 연산을 기준으로 설명합니다. 저도 열벡터 연산을 기준으로 진행해 볼께요.  
+
+아핀 변환행렬(Transform Matrix)은 아래와 같은 3x3 행렬로 정의합니다.
 
 ![tm-3x3](https://cloud.githubusercontent.com/assets/6646861/12262254/20c9d328-b96a-11e5-9eed-464c208a188f.png)
 
@@ -111,13 +107,13 @@ y' = m10 * x + m11 * y + m12 * 1;
 열벡터 연산은 아래와 같이 이루어집니다. (x -> x')  
 ![tm-3x3-v-red](https://cloud.githubusercontent.com/assets/6646861/12262252/20aefe7c-b96a-11e5-95d4-5fb284e02be5.png)
 
-열벡터 연산은 좌측에 우측으로 곱한다고 했죠? (수학 교과서 방식)
+열벡터 연산은 좌측에 우측으로 곱한다고 했죠? (수학 교과서 방식)  
 간단히 표기하면,
 
 **TM * P = P'**  
 (TM: Transform Matrix, P: Point)
 
-각각의 변환을 개별적으로 알아보고, 마지막에 변환들을 합성해 보겠습니다. 
+각각의 변환을 개별적으로 알아보고, 마지막에 변환들을 합성해 보겠습니다.  
 예제는 HTML 캔버스를 이용하여 구현해 봅시다.
 
 ### 이동 (Translate)
@@ -128,7 +124,7 @@ y' = m10 * x + m11 * y + m12 * 1;
  
 50크기의 박스에 아핀 변환을 적용해 보죠. (그리드 한 칸: 50)  
 HTML5 캔버스는 아핀 변환을 넣을 수 있는 인터페이스가 있습니다.  
-아래와 같은 순서로 파마메터를 넣어줍니다.  
+a, b, c, d, tx, ty 순서로 파마메터를 넣어주는 방식입니다.
 
 **context.transform(a, b, c, d, tx, ty);**
 
@@ -226,7 +222,7 @@ context.transform(m.a, m.b, m.c, m.d, m.tx, m.ty);
 3D에서 P'는 3D 좌표를 스크린에 투영(project)하기 위해 변환한 2D 좌표입니다.
 
 # 2. Matrix3D
-
+(작성중)
 
 ---
 
