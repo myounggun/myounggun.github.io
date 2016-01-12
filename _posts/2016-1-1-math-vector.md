@@ -18,8 +18,9 @@ categories: math
 -  스칼라는 방향이 없고 크기만 가진 값이다.
 -  벡터는 크기와 방향을 모두 가진 값이다.
 
-## 2. 벡터(Orgin: carrer -> Latin: vector)
-실수를 순서쌍(tuple)로 구성한 수의 체계(유리수, 무리수, 허수와 같은 수의 한 체걔)
+## 2. 벡터(Orgin: carrier -> Latin: vector)
+실수를 순서쌍(tuple)로 구성한 수의 체계(유리수, 무리수, 허수와 같은 수의 한 체개)
+![vector-carrier](https://cloud.githubusercontent.com/assets/6646861/12255944/81ec1950-b93c-11e5-95dc-4092e9d1bf88.png)
 
 ### 벡터의 크기와 방향
 
