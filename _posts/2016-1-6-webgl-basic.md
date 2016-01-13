@@ -62,4 +62,3 @@ WebGL 공부에 앞서 살펴봐야 할 기본 내용을 정리해 본다.
 ![http://www.songho.ca/opengl/files/gl_projectionmatrix03.png](http://www.songho.ca/opengl/files/gl_projectionmatrix03.png)  
 ![http://www.songho.ca/opengl/files/gl_projectionmatrix04.png](http://www.songho.ca/opengl/files/gl_projectionmatrix04.png)
 > Perspective Frustum and Normalized Device Coordinates (NDC)  
-> 출처 - [http://www.songho.ca/opengl/gl_projectionmatrix.html#perspective](http://www.songho.ca/opengl/gl_projectionmatrix.html#perspective)
