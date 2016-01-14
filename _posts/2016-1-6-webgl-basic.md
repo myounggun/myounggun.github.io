@@ -27,10 +27,8 @@ WebGL 공부에 앞서 살펴봐야 할 기본 내용을 정리해 본다.
  - Chrome for Android 47+
 
 ## 2. 좌표계
-- 데카르트 좌표계 사용 (위쪽 Y+)  
-- 데카르트 == 카테시안 좌표계(Orgin: Descartes -> Latin: Catesius adj. Cartesian)
-- 오른손 좌표계 (모니터가 나를 향한 방향 Z+) 
- 
+오른손 좌표계 (모니터가 나를 향한 방향 Z+)
+
 <img width="500" alt="webgl-view-coord" src="https://cloud.githubusercontent.com/assets/6646861/12256982/908e8ff2-b945-11e5-8aa6-36b37dee8ea8.png">
 
 ### 좌표계 범위
@@ -41,10 +39,20 @@ WebGL 공부에 앞서 살펴봐야 할 기본 내용을 정리해 본다.
 ### 클립 공간 (2D)
 <img width="500" alt="clip-space-2d" src="https://cloud.githubusercontent.com/assets/6646861/12261818/f054ba1c-b966-11e5-90a3-2e76e3dc2569.png">
 
-### NDC(normalized device coordinates)
-- [주의] 오른손 좌표계와 Z+ 방향 반대 (모니터를 향한 방향 Z+)  
+### 로컬과 월드 공간
+- 로컬은 객체마다 가지는 좌표 공간
+- 월드는 로컬 좌표 공간을 가진 객체가 놓이는 공간
 
-<img width="500" alt="ndc" src="https://cloud.githubusercontent.com/assets/6646861/12261817/f02ced98-b966-11e5-905c-5a2378397ed6.png">
+### 카메라 공간
+- Camera/Eye/View 공간이라고 불림
+- 사람의 눈. 즉, 카메라 좌표를  중심으로 바라본 공간
+- 객체의 좌표는 카메라 공간을 중심으로 변환
+- 객체 좌표(0,0,0) -> 카메라 좌표(0,0,100) = 카메라 기준 객체 좌표 (0,0,-100)
+
+### 버텍스 회전 방향
+- 버텍스 인덱스 순서로 회전 방향 결정
+- 반시계방향(CCW): 앞면
+- 시계방향(CW): 뒷면
 
 ## 텍스처링(texuring)
 
