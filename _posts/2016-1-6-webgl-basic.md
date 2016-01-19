@@ -11,9 +11,16 @@ WebGL 공부에 앞서 살펴봐야 할 기본 내용을 정리해 본다.
 하지만 2016년 1월 현재, iOS/Android에서 WebGL를 어느정도 지원하고 있다.
 
 * WebGL 지원 여부 확인 
- - [http://get.webgl.org](http://get.webgl.org/)
+ - [http://get.webgl.org](http://get.webgl.org)
  - [http://caniuse.com/#search=webgl](http://caniuse.com/#search=webgl)
+
+* WebGL 세부사항 확인
+ - [http://www.doesmybrowsersupportwebgl.com](http://www.doesmybrowsersupportwebgl.com)
  - [http://webglreport.com](http://webglreport.com)
+
+* WebGL 데모
+ - https://www.chromeexperiments.com
+ - http://webglsamples.org
 
 ### PC
  - IE11+
