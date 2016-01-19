@@ -8,7 +8,8 @@ WebGL 좌표계, 클립 공간, 뷰 볼륨에 대해 살펴봅니다.
 
 ## 1. 좌표계의 이해
 ### 데카르트 좌표계
-- 위쪽 +Y 기본 좌표계
+<img width="500" alt="descartes_coord" src="https://cloud.githubusercontent.com/assets/6646861/12419771/7c54f146-befb-11e5-8433-e7ed9dbf582c.png">  
+- 위쪽 +Y 기본 좌표계  
 - 데카르트  == 카테시안
   (Orgin: Descartes -> Latin: Catesius adj. Cartesian)
 
@@ -22,9 +23,31 @@ WebGL 좌표계, 클립 공간, 뷰 볼륨에 대해 살펴봅니다.
 	- -1 <= X <= +1
 	- -1 <= Y <= +1
 	- -1 <= Z <= +1
+
+### 텍스처 좌표계  
+<img width="500" alt="texture_coord" src="https://cloud.githubusercontent.com/assets/6646861/12419761/72045dda-befb-11e5-9ff6-cfe106a5f262.png">  
+- S, T (U, V)  
+- (0, 0) 좌측하단  
+- (1, 1) 우측상단  
+
+WebGL 텍스처 좌표는 위쪽이 +Y 방향이지만,  
+이미지 좌표는 아래쪽이 +Y 방향인 스크린 좌표계를 따른다.  
+따라서 별 다른 처리없이 이미지를 매핑하면 상이 뒤집힌다.
+
+- 이미지 좌표  
+<img width="500" alt="texture_screen_coord" src="https://cloud.githubusercontent.com/assets/6646861/12420107/d0972236-befd-11e5-89ee-3b56f4f0345d.png"> 
+	- 이미지 좌표는 아래쪽 +Y 스크린 좌표
+
+- 텍스처 좌표  
+<img width="500" alt="texture_coord_flip" src="https://cloud.githubusercontent.com/assets/6646861/12420122/f4ffc2cc-befd-11e5-870c-43178a55bfd7.png">  
+	- 이미지를 그대로 매핑하여 Y축 기준으로 이미지가 뒤집힌 상태
  
 ### 클립 영역
-<img width="500" alt="clip-space-2d" src="https://cloud.githubusercontent.com/assets/6646861/12261818/f054ba1c-b966-11e5-90a3-2e76e3dc2569.png">
+<img width="500" alt="clip-space-2d" src="https://cloud.githubusercontent.com/assets/6646861/12261818/f054ba1c-b966-11e5-90a3-2e76e3dc2569.png">   ㅇ
+
+(작성중)
+
+---
 
 ## 뷰 볼륨
 WebGL 뷰 볼륨 2x2x2
@@ -88,14 +111,7 @@ z = -100 -> z' = 1
 ### 버텍스 회전 방향
 - 버텍스 인덱스 순서로 회전 방향 결정
 - 반시계방향(CCW): 앞면
-- 시계방향(CW): 뒷면
-
-## 텍스처링(texuring)
-
-### 텍스처 좌표
-- S, T
-- (0, 0) 좌측하단
-- (1, 1) 우측상단
+- 시계방향(CW): 뒷면 
 
 ---
 
