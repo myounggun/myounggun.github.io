@@ -52,10 +52,6 @@ WebGL 텍스처 좌표는 위쪽이 +Y 방향이지만,
 ## 뷰 볼륨
 WebGL 뷰 볼륨 2x2x2
 
-### NDC(normalized device coordinates)
-<img width="500" alt="ndc" src="https://cloud.githubusercontent.com/assets/6646861/12261817/f02ced98-b966-11e5-905c-5a2378397ed6.png">
-
-- [주의] 오른손 좌표계와 +Z 방향 반대 (모니터를 향한 방향 +Z)
 
 ### Near, Far 평면
 - Near ~ Far 범위로 객체의 깊이를 구할 수 있다.
