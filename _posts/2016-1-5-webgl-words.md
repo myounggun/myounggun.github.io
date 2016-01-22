@@ -1,10 +1,10 @@
 ---
 layout: post
-title: WebGL 필수 용어 정리
+title: 웹지엘 용어
 categories: webgl
 ---
 
-WebGL을 공부할 때 필수적으로 알아야 할 용어를 정리해 본다.
+웹지엘을 공부할 때 필수적으로 알아야 할 용어를 정리해 본다.
 
 ## 1. 기본 용어
 
