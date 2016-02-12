@@ -4,8 +4,8 @@ title: 삼각함수(trigonometry)
 categories: math
 ---
 
-## 삼각 함수란?
-- 삼각형의 각도와 변의 길이의 관계를 밝히는 수학
+삼각함수란? 삼각형의 각도와 변의 길이의 관계를 밝히는 수학을 말한다.
+
 - 어원: 토지 측량에서 만들어졌다.
     - trigonometric function
     - tri == 삼각형(triange)
