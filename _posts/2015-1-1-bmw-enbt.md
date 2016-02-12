@@ -5,7 +5,7 @@ categories: bmw
 ---
 
 
-- 원문 - [e90 CCC and CIC to NBT retrofit DIY](http://www.bimmerfest.com/forums/showthread.php?t=799458)
+- 원문(일부 각색) - [e90 CCC and CIC to NBT retrofit DIY](http://www.bimmerfest.com/forums/showthread.php?t=799458)
 
 ## Background:
 <!--
@@ -14,9 +14,9 @@ I'm almost finished the elusive E90 CCC to NBT retrofit. Since the BMW community
 I have a 2006 E90 330i. For equipment relevant to the retrofit, my car was equipped with CCC /w voice control, telematics, Logic 7, heated seats, and ALU satin trim. Your car may be different and may require parts suitable for your equipment package.
 -->
 
-나는 어려운 CCC에서 NBT로 이식을 거의 마무리 했다. 그동안 BMW 커뮤니티의 엄청난 도움을 받았다. 나의 경험을 문서화로 공유하고자 마음 먹었다. NBT 변경 작업은 CCC의 작은 부분을 NBT 부품으로 대체하는 것이다. 
+난 어려운 CCC에서 NBT로 이식을 거의 마무리 지었다. 그동안 BMW 커뮤니티의 엄청난 도움을 받아서 나의 경험을 문서로 공유하고자 마음 먹었다. NBT 변경 작업은 CCC의 작은 부분을 NBT 부품으로 대체하는 것이다. 
 
-나는  2006년식 E90 330i를 소유하고 있다. 내 차는 CCC와 보이스 컨트롤, 텔레메틱스, 로직6, 열선 시트 그리고 알루미늄 트림을 갖추고 있다. 네 차는 아마도 다른 부품이 필요할 수도 있다.
+내 차량은 2007년식 E93 컨버이다. E93은 CCC, 보이스 컨트롤, 텔레메틱스, 로직7 오디오 시스템, 열선 시트 그리고 알루미늄 트림을 갖추고 있다. 타 차량은 아마도 다른 부품이 필요할 수도 있다.
 
 ## Disclaimer:
 <!--
@@ -25,9 +25,7 @@ I wasn't nearly as trigger happy with my camera as I should have been, and as a 
 I am NOT responsible if you buy parts that do not fit your car or if you damage your car in the process.
 -->
 
-내가 했던 작업을 멋진 사진으로 포장하여 뽐뿌를 넣지 않을 것이다. 나는 작업 현실을 위해 많은 사진을 찍었다. 또한 나는 구글 이미지를 마단으로 가져왔다.
-네가 이미지의 저작권자라면 나는 이미지를 삭제하거나 그냥 사용할 수 있게 해주길 바란다.
-
+내가 했던 작업을 멋진 사진으로 포장하여 뽐뿌를 넣지 않을 것이다. 난 있는 그대로 전달하기 위한 사진을 많이 찍었다. 이 게시물에는 구글에서 퍼온  이미지를 무단으로 사용하고 있다. 혹시 본인이 이미지의 저작권자라면 관련 이미지 삭제를 요구하거나 사용 허락을 해줬으면 좋겠다.
 
 ## Acronyms and Definitions (용어 정의)
 - CCC – Car Communications Computer iDrive Generation 1: dino era to ~2008  
@@ -55,9 +53,10 @@ I am NOT responsible if you buy parts that do not fit your car or if you damage 
 - iDrive Controller (see below)
 -->
 
-- NBT HU (나는 HW: 07 버전을 가지고 있다. 비록 다른 HW 버전이라도 내가 가진 애뮬레이터에서 동작헐 것이다. HW: 27 버전 포함)
+- NBT HU  
+  참고 - 난  HW: 07 버전을 가지고 있다. 비록 다른 HW 버전이라도 내가 가진 애뮬레이터에서 동작헐 것이다. HW: 27 버전 포함
 - NBT CID 8.8인치 (F20, F25, F30)
-- iDriveController(아래 참고)
+- iDriveController (아래 내용 참고해라.)
 
 ### 2. iDrive Controller:
 <!---
@@ -79,19 +78,17 @@ CIC Controller Frame 51169170917 (only for <2011 CIC controllers)
 Touch ECU English 65829320275 (not confirmed)
 -->
 
-이베이에 올라온 NBT 킷은 전형적으로 F시리즈 기본 컨트롤러 혹은 터치 컨트롤러를 포함하고 있다. 이 두 컨트롤러는 마운트 포인트가 다른 새로운 K-CAN2 프로토콜에서 동작한다. 그리고 CIC 컨트롤러에 비해 약간 다른 치수를 가지고 있다. (주의)
+이베이에 올라온 NBT 킷은 기본적으로  F시리즈 기본 컨트롤러 혹은 터치 컨트롤러를 포함하고 있다. 이 두 컨트롤러는 마운트 포인트가 다른 새로운 K-CAN2 프로토콜를 통해 동작한다. 그리고 CIC 컨트롤러에 비해 약간 다른 치수를 가지고 있다.
 
-CIC 컨트롤러는 분리된 프레임을 사용한다. (사진에 보여지는 블랙 트림)
-F시리즈 컨트롤러는 프레임 안에 설치되어 있다. (한 덩어리를 말하는 것 같음)
+CIC 컨트롤러는 분리된 프레임을 사용하지만 F시리즈 컨트롤러는 프레임 안에 설치되어 있다. (한 덩어리를 말하는 것 같음)
 
-F시리즈 컨트롤러는 내가 가진 애뮬레이터에 플러그앤 플레이로 연결되지 않는다. 그리고 컨트롤러는 애플레이터 장착하기 위해서 2개의 CAN 배선을 옮겨야 한다. 또한 두 배선을 마운트하기 위해 너의 독창성을 필요하다. 알루미늄 트림에 장착되어 보여지는 컨트롤러를 몇 mm 정도 잘라내야 한다. 2mm 이상 정도이다.
-(F시리즈 컨트롤러를 사용하면 커스터마이징이 필수인 듯)
+F시리즈 컨트롤러는 내 애뮬레이터를 사용하면 플러그앤 플레이로 연결되지 않는다. 그리고 컨트롤러에 애플레이터를 장착하려면 2개의 CAN 배선을 옮기는 작업을 해야한다. 또한 두 배선을 연결하기 위해  머리를 써야 할 것이다. 알루미늄 트림에 장착한 상태에서 보여지는 컨트롤러의 윗부분을 몇 mm 정도 잘라내야 한다. (2mm 이상 정도, F시리즈 컨트롤러를 사용하면 커스터마이징이 필수인 듯)
 
 불필요한 말이지만, **나는 CIC 컨트롤러를 사용해서 골치거리를 덜어냈다.** 터치 컨트롤러는 다음 프로젝트에나 가능하다. 이베이에는 다른 파츠 넘버를 가진 CIC 컨트롤러가 널려있다. 다른 파츠 넘버의 컨트롤러가 모두 작동하는지는 확실하지 않다.
 
-니가 터치 컨트롤러를 장착하는 방향으로 간다면, 너의 언어권에 맞는 터치 ECU 또한 필요하다. 
+터치 컨트롤러를 장착하고 싶다면 본인의 언어권에 맞는 터치 ECU가 추가적으로 필요하다. 
 
-니가 어떤 방법을 선택하던지 필요한 품번은 아래 적어놨다.
+어떤 방법을 선택하던지 아래의 품번이 필요할 것이다.
 
 - CIC 컨트롤러 프레임 51169170917 (2011년 이상 CIC 컨트롤러를 위한)
 - Touch ECU English 65829320275 (확실하지 않음)
@@ -104,11 +101,11 @@ I purchased my adapter from www.customretrofit.ro, which is owned by neo_anderss
 
 Coincidentally, neo_andersson and his wife were also passing through my area and were kind enough to grab coffee with me. Without a doubt, he has a true passion for BMWs and knows these cars inside out. Much of my information that I'm sharing in this post comes from him and he deserves credit where due. (Neo isn't his real name, but I'll refer to him as Neo.)
 --> 
-F바디가 K-CAN2(500kbps)를 사용해도 E바디는 K-CAN(1000kbps)를 사용한다. 애뮬레이터는 내비와 비디오인모션을 활성화 한다. 그러나 중요한건  프로토콜 사이의 통신을 연결하는 CAN 브릿지(필터)로서 역할도 수행한다. CAN 통신을 연결하는 애뮬레이터 없이 E바디에 NBT를 이식할 방법은 존재하지 않는다. F바디 액티베이션 애뮬레이터는 E바디에 적합하지 않다. 
+F바디가 K-CAN2(500kbps)를 사용해도 E바디는 K-CAN(1000kbps)를 사용한다. 애뮬레이터는 내비와 비디오인모션을 활성화 한다. 그러나 다 중요한건  프로토콜 사이의 통신을 연결하는 CAN 브릿지(필터)로서 역할도 수행한다는 것이다. CAN 통신을 연결하는 애뮬레이터 없이 E바디에 NBT를 이식할 방법은 존재하지 않는다. F바디 전용 액티베이션 애뮬레이터는 E바디에 적합하지 않다. 
 
-나는 neo andersson이 운영하는 [customretrofit.ro](http://www.customretrofit.ro)에서 애뮬레이터를 구매했다. neo andersson은 BMW 동호회에 큰 기여를 한 신뢰가 가는 사람으로 E바디용 NBT 어댑터를 만들었다. E바디용 NBT 어댑터를 구매를 결심하기 전까지 나는 그가 지난 1년동안 NBT 주제로 올린 글을 매일 꼼꼼히 읽었다.
+나는 neo andersson이 운영하는 [customretrofit.ro](http://www.customretrofit.ro)에서 애뮬레이터를 구매했다. neo andersson은 BMW 동호회에 큰 기여를 한 신뢰가 가는 사람으로 E바디용 NBT 어댑터를 제작했다. E바디 전용  NBT 어댑터 구매를 결심하기 전인  지난 1년동안 Neo가 NBT 주제로 올린 글을 매일 꼼꼼히 읽었다.
 
-우연히도 neo andersson 부부가 내가 있는 곳을 지나가면서 커피 한잔한게 다야. 의심할 여지 없이 그는 BMW에 대한 진정한 열정을 가지고 있고 이 게시물에 공유하는 많은 정보도 그로부터 얻은것이니 그는 당근 신뢰할만 하다. 
+우연히도 Neo 부부가 내가 있는 지역을 지나게 되면서  커피를 한잔한 적이 있다. 의심할 여지 없이 그는 BMW에 대한 진정한 열정을 가지고 있었고 이 게시물에 공유하는 많은 정보도 그로부터 얻은것이니 그는 당근 신뢰할만 하다. 
 (Neo는 그의 진짜 이름이 아니지만 앞으로 Neo로 언급할거야)
 
 
@@ -126,7 +123,7 @@ F바디가 K-CAN2(500kbps)를 사용해도 E바디는 K-CAN(1000kbps)를 사용�
 - CIC HU Front Panel 6 Button+AM/FM+Mode 65129270248 (More info later)
   OR Euro CIC HU Front Panel 8 Buttons 65129270250 (not available in NA)
 - CIC HU Front Panel Knob 65129114289 (CIC 전면 패널은 손잡이와 함께 딸려온다.)
-- CIC Dash Cover 51459120979 (이건 열선 시트를 잘라낼거야. 자르기 실으면 다른 품번을 찾아봐라.)
+- CIC Dash Cover 51459120979 (이건 열선 시트를 잘라낼거야. 자르기 싫다면 다른 품번을 찾아봐라.)
 - E90 LCI Center Console Trim ALU Satin (CIC controller 전용 트림. Different PN for diff finish.) 51169145143
 - 5x MQS Pins (for eNet) 61131393703 (차량 전기 장치 > 핀 접점 MQS ELA 핀 5개)
 - 5x OBD2 Pins (for eNet) (아직 품번을 몰라서 BMW 센터에 문의할거야.)
@@ -153,10 +150,10 @@ OBD2 pins on the bottom and MQS pins on the top
 - Aux/USB center console socket 84109237653 (4핀 버전)  
   단, USB가 이미 있어도 6핀 버전이라면 이게 필요할거다. 확실한건 아니다.
 - USB cable 61119129360
-- CAT5 network cable (나는 eNet와 마이크로폰 재연결 배선으로 이걸 사용했다. 어떤 배선을 사용해도 동작할 거야.)
+- CAT5 network cable (나는 eNet와 마이크로폰 재연결용 배선으로 이걸 사용했다. 어떤 배선을 사용해도 동작할 거야.)
 
-내 차는 이미 AUX를 가지고 있어서 새로운 AUX 배선 연결이 불필요 했다.
-(CIC에 있는 글로브 박스 USB는 NBT에서는 공식적으로 지원하지 않는다. 그러나 니가 USB 2개가 필요하다면 연결할 수는 있다.)
+내 차는 이미 AUX를 가지고 있어서 새로운 AUX 배선 연결은 필요없었다.
+(CIC에 포함되는 글로브 박스 USB는 NBT에서 공식적으로 지원하지 않는다. 그러나 USB 2개가 필요하다면 연결할 수는 있다.)
 
 사진 아래 것이 OBD2 핀들이고 위가 MQS 핀이다. (사진 참고)  
 <img src="http://www.abstractations.com/bmw/nbt/parts_02.jpg" width="600">
@@ -170,7 +167,7 @@ MOST Termination Plug 61136917978 (I didn't need this but other modules might ha
 (Optionally you can also disconnect the MOST connection from the MOST junction under the rear seats, but this just seemed easier.)
 -->
 
-니 차량에 TCU, MULF 혹은 Combox가 있다면 그것들을 제거해야 할 것이다.
+ 이미  TCU, MULF 혹은 Combox가 있다면 그것들을 제거해야 할 것이다.
 
 - MOST Termination Loop 61136917541
 - MOST Termination Plug 61136917978  
@@ -189,12 +186,9 @@ There is no OEM NBT display cable that I'm aware of that's long enough to use in
 - 2x #8x3/8" tapping screws (for CIC faceplate mounting – home depot sku 887480010213) 
 - 2x #6 washers (for CIC faceplate mounting – home depot sku 887480024517)
 -->
-- NBT CID Display Cable 70CM+ (애뮬레이터 셀러로 부터 얻을 수 있다.)
-
-There is no OEM NBT display cable that I'm aware of that's long enough to use in an E90. Your other option is to purchase an OEM F30 cable and extend it yourself. It has 4 shielded conductors plus two power lines.
-(NBT F30 CID Display Cable 61129261850)
-E바디에 사용할 맘ㄴ큼 충분히 긴 NBT 디스플레이 케이블이 순정품으로는 나오지 않는다. 다른 방법은 F30 OEM 케이블을 구해서 연장하는 것이다.
-(NBT F30 CID Display Cable 61129261850)
+- NBT CID Display Cable 70CM+ (애뮬레이터 셀러로 부터 얻을 수 있다.)  
+  E바디에 사용할 맘ㄴ큼 충분히 긴 NBT 디스플레이 케이블이 순정품으로는 나오지 않는다.  
+  다른 방법은 F30 OEM 케이블을 구해서 연장하는 것이다. (NBT F30 CID Display Cable 61129261850)
 
 - 2x #8x3/8" tapping screws (CIC 전면 플레이트 설치용 – home depot sku 887480010213) 
 - 2x #6 washers (CIC 전면 플레이트 설치용 – home depot sku 887480024517)
@@ -206,9 +200,9 @@ Since my NBT emulator emulates the TRSVC unit, I can use any el-cheapo eBay back
 The NBT emulator I purchased does not support dynamic parking lines. Neo also has another unit that will superimpose the parking lines based on steering wheel angle. I wish I knew he offered this when I made my purchase!
 -->
 
-나의  NBT 애뮬레이터는 TRSVC 유닛을 애뮬레이트 할 수 있어서 이베이에 올라온 어떤 후방카메라도 연결할 수 있다. 나는 이베이에서 50달러 이하로 판매되는 E90 전용 트렁크 핸들 1:1 교체 방식의 후면 CCD 카메라를 구매했다. NBT는 표준 NTSC 컴포짓 비디오를 가지고 있다. 
+E바디용 NBT 애뮬레이터는 TRSVC 유닛을 애뮬레이트 할 수 있어서 이베이에 올라온 어떤 후방카메라도 연결할 수 있다. 난 이베이에서 50달러 이하로 판매되는 E90 전용 트렁크용 후면 CCD 카메라를 구매했다. NBT는 표준 NTSC 컴포짓 비디오를 가지고 있다. 
 
-내가 구매한 애뮬레이터는 동적 주차라인을 지원하지 않는다. Neo는 핸들 조양각 기반으로 주차라인을 
+내가 구매한 애뮬레이터는 동적 주차라인을 지원하지 않지만 Neo는 핸들 조양각 기반으로 주차라인을 비디오 위에 올릴 수 있다고 한다. Neo가 추천한 제품을 구매할 것이다. 
 
 ### 8. Random Stuff:
 - Trim removal tools (ebay)
