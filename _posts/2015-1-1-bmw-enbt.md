@@ -101,11 +101,11 @@ I purchased my adapter from www.customretrofit.ro, which is owned by neo_anderss
 
 Coincidentally, neo_andersson and his wife were also passing through my area and were kind enough to grab coffee with me. Without a doubt, he has a true passion for BMWs and knows these cars inside out. Much of my information that I'm sharing in this post comes from him and he deserves credit where due. (Neo isn't his real name, but I'll refer to him as Neo.)
 --> 
-F바디가 K-CAN2(500kbps)를 사용해도 E바디는 K-CAN(1000kbps)를 사용한다. 애뮬레이터는 내비와 비디오인모션을 활성화 한다. 그러나 다 중요한건  프로토콜 사이의 통신을 연결하는 CAN 브릿지(필터)로서 역할도 수행한다는 것이다. CAN 통신을 연결하는 애뮬레이터 없이 E바디에 NBT를 이식할 방법은 존재하지 않는다. F바디 전용 액티베이션 애뮬레이터는 E바디에 적합하지 않다. 
+F바디가 K-CAN2(500kbps)를 사용해도 E바디는 K-CAN(1000kbps)를 사용한다. 애뮬레이터는 내비와 비디오인모션을 활성화 한다. 그러나 더 중요한건  프로토콜 사이의 통신을 연결하는 CAN 브릿지(필터)로서 역할도 수행한다는 것이다. CAN 통신을 연결하는 애뮬레이터 없이 E바디에 NBT를 이식할 수 있는 방법은 존재하지 않는다. F바디 전용 액티베이션 애뮬레이터는 E바디에 적합하지 않다. 
 
-나는 neo andersson이 운영하는 [customretrofit.ro](http://www.customretrofit.ro)에서 애뮬레이터를 구매했다. neo andersson은 BMW 동호회에 큰 기여를 한 신뢰가 가는 사람으로 E바디용 NBT 어댑터를 제작했다. E바디 전용  NBT 어댑터 구매를 결심하기 전인  지난 1년동안 Neo가 NBT 주제로 올린 글을 매일 꼼꼼히 읽었다.
+Neo(neo andersson)가 운영하는 [customretrofit.ro](http://www.customretrofit.ro)에서 애뮬레이터를 구매했다. Neo는 BMW 동호회에 큰 기여를 한 신뢰가 가는 동호회 멤버이고 E바디용 NBT 어댑터를 제작했다. E바디 전용  NBT 어댑터 구매를 결심하기 전인  지난 1년동안 Neo가 NBT 주제로 올린 게시글을 매일 꼼꼼히 읽었다.
 
-우연히도 Neo 부부가 내가 있는 지역을 지나게 되면서  커피를 한잔한 적이 있다. 의심할 여지 없이 그는 BMW에 대한 진정한 열정을 가지고 있었고 이 게시물에 공유하는 많은 정보도 그로부터 얻은것이니 그는 당근 신뢰할만 하다. 
+우연히도 Neo 부부가 내 거주지 근처를 지나게 되면서  커피를 한잔한 적이 있다. 의심할 여지 없이 그는 BMW에 대한 진정한 열정을 가지고 있었고 이 게시물에 공유하는 많은 정보도 그로부터 얻은것이니 그는 당연히 신뢰할만 하다. 
 (Neo는 그의 진짜 이름이 아니지만 앞으로 Neo로 언급할거야)
 
 
