@@ -223,3 +223,113 @@ E바디용 NBT 애뮬레이터는 TRSVC 유닛을 애뮬레이트 할 수 있어
 - Laptop running 32bit windows (use vmware if necessary)
 - eSys + PSdZDATA (and token and/or patched esys jar files)
 - NCS Expert + datan (to decode any removed modules)
+
+
+
+## Installation
+
+I'm not going to cover everything. Instructions to remove specific parts can be found all over the internet. All you need to do is google "bmw e90 remove [part]". I'll only cover areas that are not well documented or I had trouble doing as others suggested.
+
+Most of the pins, including the quadlock, are standard MQS pins. The exception is the OBD2 port, which uses different pins. See eNet section for pictures.
+
+
+### 1. Remove existing HU
+This has been well documented with the CIC retrofit threads.
+
+### 2. Wire eNet if coming from CCC
+CIC equipped cars are already prewired with eNet wiring. CCC cars need 5 new wires.
+On my car, pin 29 on the quadlock was already occupied by a positive fan power line for the CCC unit. This won't be needed since we're taking out CCC. In it's place, you can wire up ETH_A.
+Match up the wires from the quadlock to the OBD2 using these two pinouts diagrams.
+
+Wires can be pulled under the carpeting in the driver footwell. Remove the driver foot panel and the panel covering the obd2 port. 3 torxs screws on the foot panel. 2 philips screws on the obd2 cover. Careful with the MOST diagnostics port connected to the foot panel. As always, treat fiber optic cables with the utmost respect! Do not bend them any more than absolutely necessary!
+
+### 3. Wire microphone from courtesy lights to quadlock
+Remove FZD (courtesy lights) by taking out the two sun visors. You can get your hand between the headliner to release the two clips right above the circular lights. I tried using the screwdriver prying method others talk about online to no avail.
+
+Remove A-piller.
+Remove glovebox
+
+Pull wire down, making sure the wire in the A-piller is where the existing wires are bundled and not in front of the curtain airbag. Wires went behind the square metal bar used to hold he glovebox in place. If wiring is above, below or in front, I would expect trouble reinstalling the glovebox.
+
+Microphone and quadlock both use MQS pins. Mine had two conductors although some may have three.
+
+### 4. Wire BT antenna from driver footwell to HU
+Remove driver side foot panel. It's three torx screws. BT module is the little black box towards the left mounted on the backside of the panel. You'll need to shave off one of the flanges on the NBT Bluetooth connector to fit the BT cable. Look carefully and you'll know which one needs to go. No modifications necessary on the BT aerial end.
+
+### 5. Wire USB from center console to HU
+Remove rear air vent by pulling the back or using a trim tool. Pull air vent back as far as possible by releasing the retention clips on the sides. Stick your hand between to push out the aux faceplate strait up and out. This was a real punisher with lots of pain.
+Take out the gear shifter by pulling strait up. Pull up the black plastic frame surrounding the gear shifter by grabbing the edge through the faux leather. Take out the center console trim by grabbing through the gear shifter hole and pulling strait up hard. Pull the new USB wire to the HU.
+
+Note: USB cable needs to be rotated 180 degrees. You can do that by shaving the connector and cutting off the clip on one side.
+
+### 6. Wire backup camera from trunk lid to HU
+Instructions are all over the internet for installing it on your trunk. Pull the composite video cable up to the quadlock and plug in the two MQS pins.
+
+To get wiring past the backseat to the cabin, remove the seat cushion by pulling it strait up near the corners. You can pull this wire without taking out all the trim on the right side of the car. Simply slip it under the black plastic edging. Here, you'll be up to the glovebox.
+Inner wire on the composite cable is the positive.
+
+I got a switched positive lead from pin 13 from the quadlock using a posi-tap on the plug and play harness. This is a radio_on trigger line with a 0.5A current load. Although the camera consumes <100mW, make sure to add a 0.5A inline fast blow fuse to protect the head unit. Ground can come from most nuts and bolts in the trunk. Use a multimeter to test for power.
+
+
+### 7. Retrofit NBT LCD to CCC/CIC monitor frame
+Get the CCC or CIC screen out. See CIC retrofit threads if needed. It's only held in by two torx screws at the top.
+
+Take off the back plastic cover from the NBT CD screen by releasing the clips. The LCD is attached to the front glass by double sided foam adhesives. You'll need to break the bond with brute force. Grab the LCD and pull directly out as hard as you can. You'll break the outer glass in the process. After it breaks, just keep pulling until you get the screen out. The inner frame will take the stress off the LCD panel and you won't damage the LCD in the process.
+Next, cut off the lower edge and metal hooks with a dermal.
+
+The NBT LCD had a thinner bezel than my CCC screen. Shave or dremel out anything that prevents the LCD from sitting flush in the frame, namely the two edges where the wings are different. Remember to use masking tape and paper/bag/something to seal the LCD opening in the CCC frame to prevent shavings from entering the area while you're trimming the edges.
+Take a look at the screen in the frame to feel out the "center" position for the LCD screen. Cut and stick 3M double-sided foam adhesives to the LCD frame. Stick. Done. You'll only have one shot. Get it right! If you want to go crazy, dremel out everything that's preventing the back plate from clipping back together.
+
+### 8. Install NBT head unit in dashboard
+<!--
+I used a plug and play wiring harness instead of tapping and cutting the original wires. This was by far the most painful part of the installation. It took me 4 hours and a lot of scrapes. At the end, I had to remove the radio/climate frame and put all unnecessary stuff to the empty space on the right. I also needed a zip tie to hold up the bundle of wires to clear the USB, BT, and video connectors.
+
+I haven't made new mounting points to screw in the HU yet. It should require drilling two holes and moving the metal clips that the screw threads catch on to.
+Note: If you have Logic 7 and going for the plug and play wiring harness, you'll need to transfer the fiber optic lines from the original quadlock to the new quadlock. Be gentle with the fiber optic cables.
+-->
+나는 순정 배선을 회손하는 대신에 플러그앤플레이 하네스를 사용했다. 하네스는 설치시 괴로운 부분을  수월하게 해준다. 헤드 유닛 설치에 4시간이 걸리고 많은 스크레치를 남겼다. 라디오/공조기 프레임과 불필요한 부품들을 걷어냈다. 또한 USB, 블루투스 그리고 비디오 커넥터의 배선을 정리하기 위해 zip tie가 필요했다.
+
+나는 아직 헤드유닛 안에 새로운 연결 포인트를 만들지 않았다. 새로운 연결 포인트는 두 개의 드릴 구멍이 필요하고 메탈 클립을 위치를 옮겨야 한다.
+[주의] 로직 7 장착 차량이고 프러그앤 플레이 하네스를 사용한다면, 쿼드록의 섬유 광 케이블 라인을 수정할 필요가 있다.
+
+
+### 9. Remove redundant parts (TCU, MULF, Combox)
+My TCU was in the trunk under the removable bottom panel. I didn't take any pictures in the process but it's pretty simple. Just unplug everything, plug the MOST line in to the MOST terminator and wrap everything up with foam to prevent rattles. This took me at most five minutes.
+
+
+### 10. Install new CIC front panel and dash cover
+Cut upper pins. Cut clips. Shorten guides and screw in front panel.
+
+
+## Coding
+You'll need your emulator provider to do the coding or provide instructions. The coding to get it working at a bare minimum level is beyond me and probably specific to the emulator's implementation.
+I did some coding myself with e-sys. There's no DHCP server handing out IP addresses to the NBT. Connect via gateway URL using default IP: port 169.254.199.99:6801 with windows Ethernet IP set to 169.254.199.100 and gateway 255.255.0.0. I had to make my own VO file before e-sys would code successfully.
+I should have needed to remove TCU VO to prevent SOS error. However, for some reason, mine didn't throw an error on the kombi so I didn't do this step.
+
+
+## Open Issues with Coding/Firmware
+
+I'm sure most of these can be corrected with coding.
+
+- [FIXED with firmware update] North America 2015-1 NEXT maps don't map addresses correctly in my area. NA 2014-2 seems better.
+- RDS-TMC traffic not working
+- [Fixed with coding] Can't seem to remove BMW Assist menu items (probably some coding issue)
+
+Observations about NBT in E-series
+
+- [FIXED with firmware update] Reads but cannot play MP3s from USB. Oddly, can copy to hard drive and play without issues.
+- [FIXED with firmware update] Navigation arrival time wrong. Makes the nav unit just about useless. 
+- Emulator supports video in motion.
+- Sports display units do not stick. Will need to change to HP & lbs/ft each power cycle.
+- CIC front panel backlights are lit when I enter the car. Apparently this is to match cars with FRM2 and FRM3's welcome lights that turn backlights on on unlock.
+- US CIC faceplate with 6 buttons, AM/FM and Mode buttons. 1-6 are touch sensitive, and AM/FM and Mode act as shortcut 7&8. Coding to 6button_us only disables AM/FM. Fix, buy euro faceplate?
+- [FIXED with firmware update] Service required menu shows two blanks for sparkplug and microfilter. Apparently these fields were removed from F-series vehicles. Can be coded out of kombi on E-series to remove the blanks.
+
+
+## Next Steps
+- [Done] Drill new holes in dash bracket to secure NBT head unit.
+- [Done] Clean up rear view camera wiring.
+- [Done] Reinstall dash trim.
+
+## Done!
+NBT is great! Best thing you can do for your car if you're looking for something refreshed from CCC or CIC. Not much more I can say asides from the system being absolutely wonderful to use! It has all the bells and whistlers of any modern media system.
